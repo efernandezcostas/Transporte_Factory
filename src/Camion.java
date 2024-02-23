@@ -1,29 +1,21 @@
 public class Camion implements IComun{
 
-    private Integer [] cpGalicia = {15, 27, 36, 32};
-    private Integer [] cpMadrid = {18};
-    private Integer [] cpBarcelona = {25,43,8,17};
-
-    public Camion(){}
-
     @Override
     public float costeTotal(Integer cp) {
 
         float costeBase = (FactoryTransporte.embalaje+1)*10f;
         float costeTotal = costeBase;
 
-        String pruebaFirst = cp.toString();
-        String stringTwoFirst = "" + pruebaFirst.charAt(0) + pruebaFirst.charAt(1);
-        Integer twoFirstCP = Integer.parseInt(stringTwoFirst);
+        Integer twoFirstCP = Integer.parseInt("" + cp.toString().charAt(0) + cp.toString().charAt(1));
 
         for (Integer ele : cpGalicia){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 1.5f;
+            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 3.5f;
         }
         for (Integer ele : cpMadrid){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 1f;
+            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 2f;
         }
         for (Integer ele : cpBarcelona){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 1.2f;
+            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 3f;
         }
 
         return costeTotal;

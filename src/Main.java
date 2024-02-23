@@ -1,5 +1,5 @@
 import javax.swing.*;
-import com.castelao.transporte;
+//import com.castelao.transporte;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,15 +19,8 @@ public class Main {
         if (miTipoEmbalaje == IComun.PALE) System.out.println("Enviado en un palé.");
 
         transporte = FactoryTransporte.getTranporte(miTipoEmbalaje);
+        System.out.println("Vehículo seleccionado: "+transporte.getClass().getName());
+        System.out.println("Coste total: " + transporte.costeTotal(36300));
 
-        if (transporte instanceof Camion) {
-            System.out.println("Vehículo seleccionado: Camión");
-            System.out.println("Coste total: " + transporte.costeTotal(36300));
-        }
-
-        if (transporte instanceof Bicicleta) {
-            System.out.println("Vehículo seleccionado: Bicicleta");
-            System.out.println("Coste total: " + transporte.costeTotal(36300));
-        }
     }
 }

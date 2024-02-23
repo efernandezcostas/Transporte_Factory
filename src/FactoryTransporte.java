@@ -10,11 +10,7 @@ public class FactoryTransporte {
     }
 
     public static IComun getTranporte (int embalaje){
-        switch (embalaje){
-            case 0:     return new Bicicleta();
-            case 1:     return new Camion();
-            case 2:     return new Camion();
-            default:    return null;
-        }
+        if (embalaje==IComun.CARTON)    return new Bicicleta();
+        else                            return new Camion();
     }
 }
