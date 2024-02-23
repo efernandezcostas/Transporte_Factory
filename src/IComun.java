@@ -5,6 +5,4 @@ public interface IComun {
     public static final Integer PALE = 2;
 
     public float costeTotal(Integer cp);
-
-    //public Integer tipoEmbalaje(float x, float y, float z, float peso);
 }
