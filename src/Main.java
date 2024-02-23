@@ -1,7 +1,14 @@
 import javax.swing.*;
 //import com.castelao.transporte;
 
+/**
+ * @author efernandezcostas
+ */
 public class Main {
+    /**
+     * Clase main desde la que se introducen los datos
+     * @param args
+     */
     public static void main(String[] args) {
         IComun transporte;
 
