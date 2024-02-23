@@ -6,5 +6,5 @@ public interface IComun {
 
     public float costeTotal(Integer cp);
 
-    public Integer tipoEmbalaje(Float x, Float y, Float z, Float peso);
+    public Integer tipoEmbalaje(float x, float y, float z, float peso);
 }

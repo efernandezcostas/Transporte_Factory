@@ -1,5 +1,16 @@
 public class Camion implements IComun{
 
+    private Integer embalaje;
+
+    private Integer [] cpGalicia = {15, 27, 36, 32};
+    private Integer [] cpMadrid = {18};
+    private Integer [] cpBarcelona = {25,43,8,17};
+
+    public static final Integer Pale = 0;
+    public static final Integer Carton = 1;
+    public static final Integer Caja = 2;
+
+
     public Camion(){
 
     }
@@ -8,8 +19,8 @@ public class Camion implements IComun{
     @Override
     public float costeTotal(Integer cp) {
 
-        Float costeBase = embalaje*10f;
-        Float costeTotal = costeBase;
+        float costeBase = embalaje*10f;
+        float costeTotal = costeBase;
 
         String stringTwoFirst = cp.toString().charAt(0) + cp.toString().charAt(1) + "";
         Integer twoFirstCP = Integer.parseInt(stringTwoFirst);
@@ -36,29 +47,21 @@ public class Camion implements IComun{
     }
 
     @Override
-    public Integer tipoEmbalaje(Float x, Float y, Float z, Float peso) {
-
+    public Integer tipoEmbalaje(float x, float y, float z, float peso) {
         if (peso>10){
-            embalaje = 0;
+            embalaje = IComun.PALE;
         }
         if (peso>1 && peso<10){
-            embalaje = 2;
+            embalaje = IComun.CARTON;
         }
         if ((peso>0 && peso<5) && x+y+z<200) {
-            embalaje = 1;
+            embalaje = IComun.CAJA;
         }
         return embalaje;
     }
 
-    private Integer embalaje;
 
-    private Integer [] cpGalicia = {15, 27, 36, 32};
-    private Integer [] cpMadrid = {18};
-    private Integer [] cpBarcelona = {25,43,8,17};
 
-    public static final Integer Pale = 0;
-    public static final Integer Carton = 1;
-    public static final Integer Caja = 2;
 
 
 
