@@ -6,7 +6,7 @@ import javax.swing.*;
 public class Main {
     /**
      * Clase main desde la que se introducen los datos
-     * @param args
+     * @param args args
      */
     public static void main(String[] args) {
 

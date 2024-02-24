@@ -9,13 +9,22 @@ public class Camion implements IComun{
         Integer twoFirstCP = Integer.parseInt("" + cp.toString().charAt(0) + cp.toString().charAt(1));
 
         for (Integer ele : cpGalicia){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 3.5f;
+            if (ele.equals(twoFirstCP)) {
+                costeTotal = costeBase * 3.5f;
+                return costeTotal;
+            }
         }
         for (Integer ele : cpMadrid){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 2f;
+            if (ele.equals(twoFirstCP)) {
+                costeTotal = costeBase * 2f;
+                return costeTotal;
+            }
         }
         for (Integer ele : cpBarcelona){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 3f;
+            if (ele.equals(twoFirstCP)) {
+                costeTotal = costeBase * 3f;
+                return costeTotal;
+            }
         }
 
         return costeTotal;

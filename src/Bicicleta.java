@@ -9,13 +9,22 @@ public class Bicicleta implements IComun{
         Integer twoFirstCP = Integer.parseInt("" + cp.toString().charAt(0) + cp.toString().charAt(1));
 
         for (Integer ele : cpGalicia){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 1.3f;
+            if (ele.equals(twoFirstCP)) {
+                costeTotal = costeBase * 1.3f;
+                return costeTotal;
+            }
         }
         for (Integer ele : cpMadrid){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 1.1f;
+            if (ele.equals(twoFirstCP)) {
+                costeTotal = costeBase * 1.1f;
+                return costeTotal;
+            }
         }
         for (Integer ele : cpBarcelona){
-            if (ele.equals(twoFirstCP)) costeTotal = costeBase * 1.2f;
+            if (ele.equals(twoFirstCP)) {
+                costeTotal = costeBase * 1.2f;
+                return costeTotal;
+            }
         }
 
         return costeTotal;
