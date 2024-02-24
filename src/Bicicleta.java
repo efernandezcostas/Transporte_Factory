@@ -1,9 +1,9 @@
 public class Bicicleta implements IComun{
 
     @Override
-    public float costeTotal(Integer cp) {
+    public float costeTotal(Integer cp, Integer embalaje) {
 
-        float costeBase = (FactoryTransporte.embalaje+1)*10f;
+        float costeBase = (embalaje+1)*10f;
         float costeTotal = costeBase;
 
         Integer twoFirstCP = Integer.parseInt("" + cp.toString().charAt(0) + cp.toString().charAt(1));
